@@ -1,172 +1,133 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
-body {
-  background: #14688a;
-  color: #333;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 10%;
-  background: rgb(138, 25, 100);
-  position: sticky;
-  top: 0;
-}
-
-.navbar a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #555;
-}
-
-.navbar a:hover {
-  color: #243d22;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-.hero span {
-  color: #5f5839;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #071e1f;
-  color: white;
-  border-radius: 25px;
-  text-decoration: none;
-}
-
-/* SECTIONS */
-section {
-  padding: 60px 10%;
-  text-align: center;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-/* SKILLS */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* PROJECTS */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.project-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-/* CONTACT */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 10px;
-  border: none;
-  background: #7a6df0;
-  color: white;
-  border-radius: 20px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: white;
-  margin-top: 30px;
-}
 /* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-weight: bold;
-}
-
-.nav-link {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #555;
-  position: relative;
-  transition: 0.3s;
-}
-
-.nav-link:hover {
-  color: #7a6df0;
-}
-
-/* ACTIVE LINK */
-.nav-link.active {
-  color: #7a6df0;
-  font-weight: bold;
-}
-
-.nav-link.active::after {
-  content: "";
-  position: absolute;
+  background: #111;
+  color: rgb(35, 142, 150);
+  padding: 15px 20px;
+  position: fixed;
   width: 100%;
-  height: 2px;
-  background: #7a6df0;
-  bottom: -5px;
-  left: 0;
+  top: 0;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar a {
+  color: light pink;
+  text-decoration: none;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: lightskyblue;
+}
+
+.hero span {
+  color: yellow;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: lightsalmon;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* DARK SECTION */
+.dark {
+  background: light yellow#4d1358;
+}
+
+/* GRID CARDS */
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: lightskyblue
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* CONTACT FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background: black;
+  color: rgb(145, 155, 6);
+  border: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: lightpink;
+  text-align: center;
+  padding: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .menu {
+    display: block;
+  }
 }
